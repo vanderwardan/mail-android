@@ -6,16 +6,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.DatePicker;
 
 /**
  * Created by op on 12.03.2017.
  */
 
-public class Fragment1 extends Fragment {
+public class DialogFragment extends Fragment {
 
     public interface onEventListener {
-        void event(String s);
+        void event(int year, int month, int dayOfMonth);
     }
 
     onEventListener eventListener;
@@ -39,15 +39,14 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment1, container, false);
-        TextView tv = (TextView) v.findViewById(R.id.date);
-        tv.setOnClickListener(new View.OnClickListener() {
+        View v = inflater.inflate(R.layout.fragment_dialog, container, false);
+        final DatePicker dp = (DatePicker) v.findViewById(R.id.datePicker);
+        dp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eventListener.event("date");
+                eventListener.event(dp.getYear(), dp.getMonth(), dp.getDayOfMonth());
             }
         });
-
         return v;
     }
 }

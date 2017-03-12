@@ -1,48 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.vanderwardan.mail_android.Activity1">
+    android:layout_height="match_parent">
 
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:name="com.vanderwardan.mail_android.Fragment1"
-        android:layout_weight="1" >
-    </fragment>
 
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:name="com.vanderwardan.mail_android.Fragment2"
-        android:layout_weight="1" >
-    </fragment>
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
 
-    <!--<EditText-->
-        <!--android:id="@+id/firstName"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:ems="10"-->
-        <!--android:hint="Input your name" />-->
-
-    <!--<EditText-->
-        <!--android:id="@+id/lastName"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:ems="10"-->
-        <!--android:hint="Input your last name" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/date"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Date" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/save"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Save" />-->
 </LinearLayout>
