@@ -3,9 +3,11 @@ package com.vanderwardan.mail_android;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -40,11 +42,22 @@ public class Fragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment1, container, false);
+
         TextView tv = (TextView) v.findViewById(R.id.date);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eventListener.event("date");
+                DialogFragment dfr = new SimpleDialogFragment();
+
+                dfr.show(getActivity().getSupportFragmentManager(), (String) "datapicker");
+            }
+        });
+
+        Button btn = (Button) v.findViewById(R.id.save);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eventListener.event("save");
             }
         });
 
