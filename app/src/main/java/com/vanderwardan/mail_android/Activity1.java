@@ -19,19 +19,19 @@ public class Activity1 extends AppCompatActivity implements Fragment1.onEventLis
 //
 //        //set first name
 //        if(intent.hasExtra("firstName")) {
-//            ((EditText) fragment1.getView().findViewById(R.id.firstName)).
+//            ((EditText) fragment_1.getView().findViewById(R.id.firstName)).
 //                    setText(intent.getStringExtra("firstName"));
 //        }
 //
 //        //set last name
 //        if(intent.hasExtra("lastName")) {
-//            ((EditText) fragment1.getView().findViewById(R.id.lastName)).
+//            ((EditText) fragment_1.getView().findViewById(R.id.lastName)).
 //                    setText(intent.getStringExtra("lastName"));
 //        }
 //
 //        //set date
 //        if(intent.hasExtra("date")) {
-//            ((TextView) fragment1.getView().findViewById(R.id.showDate)).
+//            ((TextView) fragment_1.getView().findViewById(R.id.showDate)).
 //                    setText(intent.getStringExtra("date"));
 //        }
 
@@ -45,7 +45,7 @@ public class Activity1 extends AppCompatActivity implements Fragment1.onEventLis
     public void event(String s) {
         if (s == "date") {
             FragmentTransaction frgmTr = getFragmentManager().beginTransaction();
-//            frgmTr.remove(fragment1);
+//            frgmTr.remove(fragment_1);
 //            frgmTr.add(R.id.fragmentContainer, dialogFragment);
 //            frgmTr.commit();
         } else if (s == "save") {

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,15 +42,14 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment1, container, false);
+        View v = inflater.inflate(R.layout.fragment_1, container, false);
 
         TextView tv = (TextView) v.findViewById(R.id.date);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment dfr = new SimpleDialogFragment();
-
-                dfr.show(getActivity().getSupportFragmentManager(), (String) "datapicker");
+                dfr.show(((AppCompatActivity) getActivity()).getSupportFragmentManager(), (String) "datapicker");
             }
         });
 
