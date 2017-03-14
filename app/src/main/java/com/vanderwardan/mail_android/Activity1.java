@@ -43,12 +43,7 @@ public class Activity1 extends AppCompatActivity implements Fragment1.onEventLis
 
     @Override
     public void event(String s) {
-        if (s == "date") {
-            FragmentTransaction frgmTr = getFragmentManager().beginTransaction();
-//            frgmTr.remove(fragment_1);
-//            frgmTr.add(R.id.fragmentContainer, dialogFragment);
-//            frgmTr.commit();
-        } else if (s == "save") {
+        if (s == "save" && checkAllFieldsAreFilled()) {
             this.finish();
             Intent intent = new Intent(this, Activity2.class);
 
@@ -65,5 +60,19 @@ public class Activity1 extends AppCompatActivity implements Fragment1.onEventLis
 
             startActivity(intent);
         }
+    }
+
+    //for "Save" button
+    boolean checkAllFieldsAreFilled() {
+        Fragment1 frg = (Fragment1) getFragmentManager().findFragmentById(R.id.fragmentContainer);
+
+        if (((TextView) frg.getView().findViewById(R.id.firstName)).getText().toString().equals(""))
+            return false;
+        if (((TextView) frg.getView().findViewById(R.id.lastName)).getText().toString().equals(""))
+            return false;
+        if (((TextView) frg.getView().findViewById(R.id.date)).getText().toString().equals("Date"))
+            return false;
+
+        return true;
     }
 }
