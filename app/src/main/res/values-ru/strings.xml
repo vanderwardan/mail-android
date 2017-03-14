@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mail-android</string>
+    <string name="btnFirstName_text">Имя</string>
+    <string name="btnLastName_text">Фамилия</string>
+    <string name="btnDate_text">Дата</string>
+    <string name="btnSave_text">Сохранить</string>
+    <string name="btnEdit_text">Изменить</string>
+</resources>

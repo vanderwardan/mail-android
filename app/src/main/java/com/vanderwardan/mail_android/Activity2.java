@@ -22,24 +22,7 @@ public class Activity2 extends Activity implements View.OnClickListener {
         btn.setOnClickListener(this);
 
         Intent intent = getIntent();
-
-        //set first name
-        if (intent.hasExtra("firstName")) {
-            ((TextView) findViewById(R.id.showFirstName)).
-                    setText(intent.getStringExtra("firstName"));
-        }
-
-        //set last name
-        if (intent.hasExtra("lastName")) {
-            ((TextView) findViewById(R.id.showLastName)).
-                    setText(intent.getStringExtra("lastName"));
-        }
-
-        //set date
-        if (intent.hasExtra("date")) {
-            ((TextView) findViewById(R.id.showDate)).
-                    setText(intent.getStringExtra("date"));
-        }
+        setInfo(intent);
     }
 
     @Override
@@ -47,18 +30,44 @@ public class Activity2 extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.btnEdit) {
             this.finish();
             Intent intent = new Intent(this, Activity1.class);
-
-            //send first name
-            TextView tv = (TextView) findViewById(R.id.showFirstName);
-            intent.putExtra("firstName", tv.getText().toString());
-            //send last name
-            tv = (TextView) findViewById(R.id.showLastName);
-            intent.putExtra("lastName", tv.getText().toString());
-            //send date
-            tv = (TextView) findViewById(R.id.showDate);
-            intent.putExtra("date", tv.getText().toString());
-
+            putInfo(intent);
             startActivity(intent);
         }
+    }
+
+    //set info from Activity1
+    public void setInfo(Intent intent) {
+        //set first name
+        if (intent.hasExtra("firstName")) {
+            ((TextView) findViewById(R.id.btnShowFirstName)).
+                    setText(intent.getStringExtra("firstName"));
+        }
+
+        //set last name
+        if (intent.hasExtra("lastName")) {
+            ((TextView) findViewById(R.id.btnShowLastName)).
+                    setText(intent.getStringExtra("lastName"));
+        }
+
+        //set date
+        if (intent.hasExtra("date")) {
+            ((TextView) findViewById(R.id.btnShowDate)).
+                    setText(intent.getStringExtra("date"));
+        }
+    }
+
+    //put info for Activity1
+    public void putInfo(Intent intent) {
+        //send first name
+        TextView tv = (TextView) findViewById(R.id.btnShowFirstName);
+        intent.putExtra("firstName", tv.getText().toString());
+
+        //send last name
+        tv = (TextView) findViewById(R.id.btnShowLastName);
+        intent.putExtra("lastName", tv.getText().toString());
+
+        //send date
+        tv = (TextView) findViewById(R.id.btnShowDate);
+        intent.putExtra("date", tv.getText().toString());
     }
 }

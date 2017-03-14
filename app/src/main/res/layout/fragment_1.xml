@@ -5,29 +5,30 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/firstName"
+        android:id="@+id/btnFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Input your name" />
+        android:hint="@string/btnFirstName_text" />
 
     <EditText
-        android:id="@+id/lastName"
+        android:id="@+id/btnLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Input your last name" />
+        android:hint="@string/btnLastName_text" />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/btnDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date" />
+        android:textSize="25dp"
+        android:text="@string/btnDate_text" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save" />
+        android:text="@string/btnSave_text" />
 
 </LinearLayout>

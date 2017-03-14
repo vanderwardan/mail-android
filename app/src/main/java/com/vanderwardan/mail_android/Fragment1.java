@@ -44,7 +44,7 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_1, container, false);
 
-        TextView tv = (TextView) v.findViewById(R.id.date);
+        TextView tv = (TextView) v.findViewById(R.id.btnDate);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +53,7 @@ public class Fragment1 extends Fragment {
             }
         });
 
-        Button btn = (Button) v.findViewById(R.id.save);
+        Button btn = (Button) v.findViewById(R.id.btnSave);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

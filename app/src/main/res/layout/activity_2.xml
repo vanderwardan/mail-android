@@ -5,24 +5,26 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/showFirstName"
+        android:id="@+id/btnShowFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/showLastName"
+        android:id="@+id/btnShowLastName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="20" />
 
     <TextView
-        android:id="@+id/showDate"
+        android:id="@+id/btnShowDate"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="20" />
 
     <Button
         android:id="@+id/btnEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit" />
+        android:text="@string/btnEdit_text" />
 
 </LinearLayout>
