@@ -3,6 +3,7 @@ package com.vanderwardan.mail_android;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 /**
- * Created by op on 12.03.2017.
+ * Created by vanderwardan on 12.03.2017.
  */
 
 public class SimpleDialogFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
@@ -20,6 +21,7 @@ public class SimpleDialogFragment extends DialogFragment implements DatePickerDi
         super.onCreate(savedInstanceState);
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 

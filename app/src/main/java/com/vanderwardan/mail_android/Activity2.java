@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by op on 13.03.2017.
+ * Created by vanderwardan on 13.03.2017.
  */
 
 public class Activity2 extends Activity implements View.OnClickListener {
